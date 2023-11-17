@@ -15,5 +15,4 @@ COPY --from=build-env /App/out .
 
 EXPOSE 7193 # Defined in the launchSettings.json file (https)
 EXPOSE 5026 # Defined in the launchSettings.json file (http)
-EXPOSE 3000
 ENTRYPOINT ["dotnet", "WebApplication1.dll"]
