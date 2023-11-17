@@ -13,6 +13,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /App
 COPY --from=build-env /App/out .
 
-EXPOSE 7193 # Defined in the launchSettings.json file (https)
-EXPOSE 5026 # Defined in the launchSettings.json file (http)
+EXPOSE 80
 ENTRYPOINT ["dotnet", "WebApplication1.dll"]
