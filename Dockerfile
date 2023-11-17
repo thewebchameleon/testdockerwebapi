@@ -14,5 +14,5 @@ WORKDIR /App
 COPY --from=build-env /App/out .
 
 ENV DOTNET_EnableDiagnostics=0
-EXPOSE 8080
+EXPOSE 7193 # Needs to match what is defined in the launchSettings.json file
 ENTRYPOINT ["dotnet", "WebApplication1.dll"]
